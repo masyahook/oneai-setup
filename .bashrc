@@ -11,7 +11,7 @@ alias install_copilot='curl -fsSL https://cli.github.com/packages/githubcli-arch
 
 # Creating aliases
 
-alias ls='ls -F --color=auto' # colorized ls
+alias ls='ls -aF --color=auto' # colorized ls
 alias lt='ls -altrh'  # ls as a table sorted by time
 alias lS='ls -alhrS'  # ls as a table sorted by size
 
