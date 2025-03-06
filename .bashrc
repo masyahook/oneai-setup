@@ -47,10 +47,10 @@ function prompt
 local WHITE="\[\033[1;37m\]"
 local GREEN="\[\033[0;32m\]"
 local CYAN="\[\033[0;36m\]"
-local GRAY="\[\033[0;37m\]"
+local BLACK="\[\033[0;30m\]"
 local BLUE="\[\033[0;34m\]"
 local PURPLE="\[\033[0;35m\]"
-export PS1="${GREEN}\u@\h ${PURPLE}\w${BLUE}"' $(__git_ps1 "(%s) ")'"${GRAY}"
+export PS1="${GREEN}\u@\h ${PURPLE}\w${BLUE}"' $(__git_ps1 "(%s) ")'"${BLACK}"
 }
 prompt
 
