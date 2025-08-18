@@ -8,19 +8,13 @@ sudo apt install screen -y
 conda init bash
 source /opt/conda/etc/profile.d/conda.sh
 
-cd /home/oneai/oneai-rnd-icd-template
-
-# Install db env
-conda env remove -n icd || true
-make create-env &&
-conda activate icd &&
-make db-setup
+cd /home/oneai/oneai-rnd-icd-guide
 
 # Install test env
-conda env remove -n icd_test || true
-make test-env &&
-conda activate icd_test &&
-make spark-setup
+conda env remove -n guide || true
+make create-env &&
+conda activate guide &&
+make setup
 
 # Install Github Copilot CLI
 type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
