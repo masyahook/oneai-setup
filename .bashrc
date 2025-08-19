@@ -269,6 +269,30 @@ trinetxsf() {
     echo "SF_ROLE=$SF_ROLE"
 }
 
+# Function to set CCT SF keys
+cctsf() {
+    export SF_SCHEMA=$CONTROLTOWER_SF_SCHEMA
+
+    export SF_BASE64_KEY=$EMEA_RND_SF_BASE64_KEY
+    export SF_PASSPHRASE=$EMEA_RND_SF_PASSPHRASE
+    export SF_ACCOUNT=$EMEA_RND_SF_ACCOUNT
+
+    export SF_WAREHOUSE=$EMEA_RND_SF_WAREHOUSE
+    export SF_DATABASE=$EMEA_RND_SF_DATABASE
+    export SF_USER=$EMEA_RND_SF_USER
+    export SF_ROLE=$EMEA_RND_SF_ROLE
+
+    echo "TrinetX Snowflake environment set"
+    echo "SF_SCHEMA=$SF_SCHEMA"
+    echo "SF_BASE64_KEY=$SF_BASE64_KEY"
+    echo "SF_PASSPHRASE=$SF_PASSPHRASE"
+    echo "SF_ACCOUNT=$SF_ACCOUNT"
+    echo "SF_WAREHOUSE=$SF_WAREHOUSE"
+    echo "SF_DATABASE=$SF_DATABASE"
+    echo "SF_USER=$SF_USER"
+    echo "SF_ROLE=$SF_ROLE"
+}
+
 metaup() {
     if [ $# -eq 0 ]; then
         echo "Usage: metaup <disease_name>"
